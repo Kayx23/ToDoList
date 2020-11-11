@@ -3,6 +3,12 @@ const todoList = document.querySelector(".todo-list");
 const todoInput = document.querySelector(".todo-input");
 
 submitButton.addEventListener("click", addTask);
+todoInput.addEventListener("keydown", function (e) {  // do keydown; keyup is too late
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        addTask();
+    }
+});
 
 function addTask(event) {
 
