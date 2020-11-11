@@ -80,7 +80,9 @@ div.task-container{
     background:  rgb(70, 179, 76);
 }
 
-/* .task-container button:hover {
-    background: rgb(194, 193, 193);
-    color: rgb(89, 89, 89);
-} */
+
+/* make the trash can and check mark not respond to pointer event */
+/* so that e.target does not target the icons */
+.far {
+    pointer-events: none;
+}
