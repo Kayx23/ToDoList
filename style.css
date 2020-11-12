@@ -11,6 +11,7 @@ header, form{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 form input, form button {
@@ -39,6 +40,7 @@ div.task-container{
     margin: auto;
     margin-top: 1rem;
     transition: all 0.5s ease;
+    overflow-wrap: anywhere;
 }
 
 .task-container {
@@ -47,7 +49,8 @@ div.task-container{
     justify-content: space-between;
     align-items: center;
     width: 20rem;
-    background: white;
+    background: rgb(255, 255, 255,0.8);
+    border-radius: 0.5rem;
 }
 
 .task-container li {
@@ -61,6 +64,8 @@ div.task-container{
     padding: 0.5rem;
     font-size: 1rem;
     transition: all 0.2s ease ;
+    border-radius: 0.5rem;
+    align-self:flex-start; /* keep the icons to the top when there are multilines */
 }
 
 .task {
