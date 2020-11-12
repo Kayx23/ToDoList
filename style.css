@@ -97,3 +97,10 @@ div.task-container{
     transform: translateY(20rem) rotateZ(70deg);
     opacity: 0;
 }
+
+/* drop-down */
+
+select{
+    padding: 0.5rem;
+    margin: 1rem;
+}

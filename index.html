@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script defer src="./app.js"></script>
     <script defer src="./check-delete.js"></script>
+    <script defer src="./filter.js"></script>
 
 </head>
 
@@ -24,6 +25,13 @@
         <button class="todo-submit" type="button">
             <i class="fas fa-plus-circle"></i>
         </button>
+
+        <!-- drop-down menu -->
+        <select name="category" id="filter">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="outstanding">Outstanding</option>
+        </select>
     </form>
 
     <div class="todo-container">
