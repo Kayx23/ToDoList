@@ -1,4 +1,6 @@
 function saveToLocalStorage(todo) {
+    // todo is a string value
+
     // checking local storage
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -12,8 +14,21 @@ function saveToLocalStorage(todo) {
 }
 
 
+
+function removeFromLocalStorage(todo) {
+    // todo is a string value
+
+    let todos;
+    todos = JSON.parse(localStorage.getItem('todos'));
+    // remove from array; array.splice(index,how-many,optional new items)
+    todos.splice(todos.indexOf(todo), 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+
+
 function addFromLocalStorage() {
-    // get items from local storage
+    // initialize items from local storage after loading DOM
     let todos;
     if (localStorage.getItem('todos') != null) {
         todos = JSON.parse(localStorage.getItem('todos')); // todos is an array

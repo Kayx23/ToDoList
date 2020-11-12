@@ -11,7 +11,10 @@ listArea.addEventListener("click", function (e) {
         const item = click.parentElement;
         item.classList.add("fall");
         item.addEventListener("transitionend", function () {
-            item.remove()
+            item.remove();
         })
+        // placing this inside transitionend even listener will result in calling multiple times...
+        // because transitionend fires for each PROPERTY transitioned
+        removeFromLocalStorage(item.children[0].innerText);
     }
 })
