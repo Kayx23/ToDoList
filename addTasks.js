@@ -10,7 +10,7 @@ todoInput.addEventListener("keydown", function (e) {  // do keydown; keyup is to
     }
 });
 
-function addTask(event) {
+function addTask() {
 
     // add Task html structure
     /* <div class="task-container">
@@ -38,6 +38,9 @@ function addTask(event) {
     divTask.appendChild(buttonDelete)
 
     todoList.appendChild(divTask)
+
+    /* add todo to the local storage */
+    saveToLocalStorage(todoInput.value)
 
     todoInput.value = ""
 }
